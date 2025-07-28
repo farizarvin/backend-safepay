@@ -5,10 +5,10 @@ from contextlib import asynccontextmanager
 import logging
 
 from app.config import settings
-from app.models.model_loader import MultiModelLoader  # ✅ FIX: Gunakan MultiModelLoader
+from app.models.model_loader import MultiModelLoader  
 from app.services.fraud_service import FraudDetectionService
 from app.schemas.prediction import (
-    OnlinePaymentInput, CreditCardInput, FraudDetectionResponse, HealthResponse  # ✅ FIX: Import yang benar
+    OnlinePaymentInput, CreditCardInput, FraudDetectionResponse, HealthResponse  
 )
 
 # Configure logging
@@ -27,7 +27,7 @@ async def lifespan(app: FastAPI):
     logger.info("🚀 Starting Multi-Model Fraud Detection API...")
     
     # Initialize model loader
-    model_loader = MultiModelLoader()  # ✅ FIX: Gunakan MultiModelLoader
+    model_loader = MultiModelLoader() 
     
     # ✅ FIX: Load models dengan encoder paths
     models_config = {
@@ -69,7 +69,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="Multi-Model Fraud Detection API",
-    version="2.0.0",  # ✅ Update version
+    version="2.0.0",  
     description="API untuk deteksi fraud dengan multiple machine learning models",
     lifespan=lifespan
 )
