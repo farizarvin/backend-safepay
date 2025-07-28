@@ -8,13 +8,13 @@ class Settings(BaseSettings):
     APP_NAME: str = "Fraud Detection API"
     VERSION: str = "1.0.0"
     DEBUG: bool = True
-    
+
     # Model settings
     MODEL_PATH: str = "app/models/model.pkl"
-    
+
     # API settings
     API_V1_PREFIX: str = "/api/v1"
-    
+
     class Config:
         env_file = ".env"
         case_sensitive = True
