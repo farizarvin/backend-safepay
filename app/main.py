@@ -81,6 +81,7 @@ app.add_middleware(
         "http://localhost:3000", 
         "http://127.0.0.1:3000",
         "http://localhost:3001",
+        "http://52.87.172.176:8000",
         "*"  # For development only
     ],
     allow_credentials=True,
