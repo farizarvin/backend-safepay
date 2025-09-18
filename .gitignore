@@ -1,3 +1,9 @@
-./.env
-./__pycache__
-./app/__pycache__
+.env
+*.pyc
+__pycache__
+app/__pycache__
+app/models/__pycache__
+
+./**/*.pyc
+./**/__pycache__
+./**/__pycache__/*
